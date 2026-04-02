@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a3b8bfcf-2c94-407b-a901-f48409719386" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/controller/CustomerPlanController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/controller/ExecutiveController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/controller/TicketController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/dto/CustomerByIdResdto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/dto/CustomerPlanByIDresdto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/dto/CustomerPlanReqdto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/dto/CustomerPlanResdto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/dto/ExecutiveResdto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/dto/FilterReqDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/dto/TicketGetResdto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/dto/TicketReqDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/dto/TicketResDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/enums/JobTitle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/enums/TicketPriority.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/enums/TicketStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/exceptions/ResourceNotfound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/mapper/CustomerMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/mapper/CustomerPlanMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/mapper/TickerMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/model/CustomerPlan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/model/Executive.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/model/Plan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/model/Ticket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/repository/CustomerPlanRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/repository/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/repository/ExecutiveRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/repository/PlanRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/repository/TicketRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/service/CustomerPlanService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/service/ExecutiveService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/service/PlanService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/service/TicketService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyApp/src/main/java/com/springboot/myapp/utility/computeDate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notes/src/main/java/com/blog/notes/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notes/src/main/java/com/blog/notes/controller/StudentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notes/src/main/java/com/blog/notes/dto/StudentDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notes/src/main/java/com/blog/notes/dto/Studentresdto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notes/src/main/java/com/blog/notes/model/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notes/src/main/java/com/blog/notes/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notes/src/main/java/com/blog/notes/repository/Studentrepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notes/src/main/java/com/blog/notes/repository/UserDetailsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notes/src/main/java/com/blog/notes/service/CustomUserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notes/src/main/java/com/blog/notes/service/Studentservice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/Mapper/ProductMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/Mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/config/JwtConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/controller/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/controller/CartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/controller/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/dto/CategoryReqdto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/dto/CategoryResdto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/dto/LoginRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/dto/LoginResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/dto/ProductRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/dto/ProductResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/dto/Productdetailsresdto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/dto/UserResponsedto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/enums/OrderStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/enums/ProductStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/enums/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/execption/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/execption/ResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/model/Cart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/model/CartItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/model/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/model/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/model/OrderItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/repository/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/security/JwtAuthFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/security/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/security/UserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/service/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/service/CartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quitqbackend/src/main/java/com/quitq/service/UserService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="3BhQ7mxdSRk9Ek7VwXZs4MQbKIh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/hj818/OneDrive/Pictures/Desktop/Hex_fsd",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.31033.145" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a3b8bfcf-2c94-407b-a901-f48409719386" name="Changes" comment="" />
+      <created>1774938664930</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1774938664930</updated>
+      <workItem from="1774938670567" duration="17000" />
+    </task>
+    <servers />
+  </component>
+</project>
