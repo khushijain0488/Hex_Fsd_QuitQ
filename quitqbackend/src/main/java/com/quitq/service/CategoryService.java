@@ -30,11 +30,9 @@ public class CategoryService {
         );
     }
 
-    public CategoryResdto getAllCategory(int page, int size) {
-        Pageable pageable=PageRequest.of(page,size);
-        Page<Category> categories_of_product= categoryRepository.findAll(pageable);
-        return new CategoryResdto(categories_of_product.toList(),categories_of_product.getTotalElements(),
-                categories_of_product.getTotalPages());
+    public List<Category> getAllCategory() {
+
+        return categoryRepository.findAll();
     }
 
     public Category getCategoryById(long id) {
@@ -50,7 +48,7 @@ public class CategoryService {
         Category category=getCategoryById(id);
 //        if it got then update the category
         category.setName(categoryReqdto.name());
-        category.setDescription(categoryReqdto.desciption());
+        category.setDescription(categoryReqdto.description());
 //        save this updation in db
         categoryRepository.save(category);
 

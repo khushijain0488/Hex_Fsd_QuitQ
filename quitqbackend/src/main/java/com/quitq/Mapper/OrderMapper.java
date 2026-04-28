@@ -9,7 +9,7 @@ import java.util.List;
 @Component
 public class OrderMapper {
     // mapper
-    public  OrderResponseDTO ToDTO(Order order) {
+    public static OrderResponseDTO ToDTO(Order order) {
         List<OrderItemResponseDTO> items = order.getOrderItems()
                 .stream()
                 .map(item -> new OrderItemResponseDTO(

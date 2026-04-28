@@ -28,7 +28,7 @@ public class User implements UserDetails {
     private Long id;
 
     @Column(nullable = false)
-    private String name;
+    private String username;
 
     @Column(nullable = false, unique = true)
     private String email;
@@ -52,8 +52,5 @@ public class User implements UserDetails {
         return List.of(sga);
     }
 
-    @Override
-    public String getUsername() {
-        return email;
-    }
+
 }

@@ -5,5 +5,7 @@ public record CartItemResponseDTO(
         String productName,
         Double price,
         Integer quantity,
-        Double subTotal
+        Double subTotal,
+         String imageUrl
+
 ) {}

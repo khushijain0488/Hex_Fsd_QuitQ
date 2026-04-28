@@ -5,8 +5,6 @@ import jakarta.validation.constraints.NotNull;
 
 public record CartRequestDTO(
 
-        @NotNull(message = "User ID is required")
-        Long userId,
 
         @NotNull(message = "Product ID is required")
         Long productId,

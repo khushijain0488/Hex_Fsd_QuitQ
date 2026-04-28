@@ -49,7 +49,7 @@ public class ProductServiceTest {
 
         User seller = new User();
         seller.setId(1L);
-        seller.setName("Test Seller");
+        seller.setUsername("Test Seller");
 
         Product product = new Product();
         product.setId(id);
@@ -79,7 +79,7 @@ public class ProductServiceTest {
 
 
     @Test
-    public void getAllProducts_ReturnsCorrectPageData() {
+    public void getAllProductsReturnsCorrectPageData() {
         Product p1 = buildProduct(1L, "Phone", 999.0, 1L, "Electronics");
         Product p2 = buildProduct(2L, "Laptop", 1499.0, 1L, "Electronics");
         List<Product> products = List.of(p1, p2);
@@ -100,7 +100,7 @@ public class ProductServiceTest {
     }
 
     @Test
-    public void getAllProducts_WhenEmpty_ReturnsEmptyList() {
+    public void getAllProductsWhenEmptyReturnsEmptyList() {
         Pageable pageable = PageRequest.of(0, 5);
         Page<Product> emptyPage = new PageImpl<>(List.of(), pageable, 0);
 
@@ -116,7 +116,7 @@ public class ProductServiceTest {
 
 
     @Test
-    public void getProductById_WhenExists_ReturnsProduct() {
+    public void getProductByIdWhenExistsReturnsProduct() {
         Product product = buildProduct(1L, "Phone", 999.0, 1L, "Electronics");
 
         when(productRepository.findById(1L)).thenReturn(Optional.of(product));
@@ -132,7 +132,7 @@ public class ProductServiceTest {
     }
 
     @Test
-    public void getProductById_WhenNotFound_ThrowsException() {
+    public void getProductByIdWhenNotFoundThrowsException() {
         when(productRepository.findById(99L)).thenReturn(Optional.empty());
 
         Exception ex = Assertions.assertThrows(RuntimeException.class, () -> {
@@ -146,7 +146,7 @@ public class ProductServiceTest {
 
 
     @Test
-    public void searchByName_WhenKeywordMatches_ReturnsProducts() {
+    public void searchByNameWhenKeywordMatchesReturnsProducts() {
         Product p1 = buildProduct(1L, "iPhone", 999.0, 1L, "Electronics");
         Pageable pageable = PageRequest.of(0, 5);
         Page<Product> page = new PageImpl<>(List.of(p1), pageable, 1);

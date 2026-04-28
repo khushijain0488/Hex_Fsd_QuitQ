@@ -10,6 +10,9 @@ import java.util.Optional;
 @Repository
 public interface CartRepository extends JpaRepository<Cart, Long> {
 
-    @Query("SELECT c FROM Cart c WHERE c.user.id = ?1")
+    @Query("""
+SELECT c FROM Cart c WHERE c.user.id = ?1
+""")
     Optional<Cart> findByUser_Id(Long userId);
+
 }

@@ -15,16 +15,16 @@ import java.util.List;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/categories")
+@CrossOrigin(origins = "http://localhost:5173")
 public class CategoryController {
     private final CategoryService categoryService;
     private final CategoryRepository categoryRepository;
 
     //    finding all category
     @GetMapping("/get-all")
-    public CategoryResdto getAllCategory
-    (@RequestParam(value="page",required = false,defaultValue = "0")int page,
-     @RequestParam(value = "size",required = false,defaultValue = "5")int size){
-        return categoryService.getAllCategory(page,size);
+    public List<Category> getAllCategory
+    (){
+        return categoryService.getAllCategory();
 
     }
 //    finding category by its id

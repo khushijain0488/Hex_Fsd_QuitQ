@@ -15,8 +15,14 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 import java.util.List;
+import java.util.UUID;
 
 @Service
 @AllArgsConstructor
@@ -73,41 +79,74 @@ return product;
     }
 
     // Create product
-    public ProductResponseDTO createProduct(ProductRequestDTO dto) {
+    public ProductResponseDTO createProduct(ProductRequestDTO dto, MultipartFile image, String name) {
         Category category = categoryService.getById(dto.categoryId());
+        User seller = userService.getLoggedInUser(name);
 
-        User seller = userService.getById(dto.sellerId());
+        String imageUrl = null;
+        if (image != null && !image.isEmpty()) {
+            imageUrl = saveImage(image);
+        }
 
-        Product product = productMapper.toEntity(dto, category, seller);
+        Product product = productMapper.toEntity(dto, category, seller, imageUrl);
         return productMapper.toDTO(productRepository.save(product));
     }
 
-    // Update product
-    public ProductResponseDTO updateProduct(Long id, ProductRequestDTO dto) {
-        Product product = productRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Product not found with id: " + id));
+    private String saveImage(MultipartFile image) {
+        try {
+            String uploadDir = "uploads/products/";
+            String fileName = UUID.randomUUID() + "_" + image.getOriginalFilename();
+            Path uploadPath = Path.of(uploadDir);
 
-        Category category = categoryService.getById(dto.categoryId());
+            if (!Files.exists(uploadPath)) {
+                Files.createDirectories(uploadPath);
+            }
 
-        product.setName(dto.name());
-        product.setDescription(dto.description());
-        product.setPrice(dto.price());
-        product.setStockQuantity(dto.stockQuantity());
-        product.setImageUrl(dto.imageUrl());
-        product.setCategory(category);
-        product.setStatus(dto.stockQuantity() == 0
-                ? ProductStatus.OUT_OF_STOCK
-                : ProductStatus.AVAILABLE);
+            Files.copy(image.getInputStream(), uploadPath.resolve(fileName),
+                    StandardCopyOption.REPLACE_EXISTING);
 
-        return productMapper.toDTO(productRepository.save(product));
+            return "/" + uploadDir + fileName; // URL to access later
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to save image", e);
+        }
     }
+
+//     Update product
+public ProductResponseDTO updateProduct(Long id, ProductRequestDTO dto, MultipartFile image) {
+    Product product = productRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Product not found with id: " + id));
+
+    Category category = categoryService.getById(dto.categoryId());
+
+    product.setName(dto.name());
+    product.setDescription(dto.description());
+    product.setPrice(dto.price());
+    product.setStockQuantity(dto.stockQuantity());
+    product.setCategory(category);
+    product.setStatus(dto.stockQuantity() == 0
+            ? ProductStatus.OUT_OF_STOCK
+            : ProductStatus.AVAILABLE);
+
+    // Only update image if new one is uploaded, else keep existing
+    if (image != null && !image.isEmpty()) {
+        product.setImageUrl(saveImage(image));
+    }
+
+    return productMapper.toDTO(productRepository.save(product));
+}
 
     // Delete product
-    public String deleteProduct(Long id) {
-        Product product = productRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Product not found with id: " + id));
-        productRepository.delete(product);
-        return "Product deleted successfully";
+    public void deactivateProduct(Long productId, String name) {
+        Product product = productRepository.findById(productId)
+                .orElseThrow(() -> new RuntimeException("Product not found"));
+
+        // check product belongs to this seller
+        if (!product.getSeller().getUsername().equals(name)) {
+            throw new RuntimeException("Unauthorized!");
+        }
+
+        product.setStatus(ProductStatus.INACTIVE); // or INACTIVE if you have it
+        productRepository.save(product);
     }
     // get product entity by id (used by CartService)
     public Product getProductById_Entity(Long id) {
@@ -116,4 +155,11 @@ return product;
     }
 
 
+    public List<Product> getAll() {
+       return productRepository.findAll();
+    }
+
+    public List<Product> getAllProductBySeller(String name) {
+        return productRepository.getAllProductBySeller(name);
+    }
 }

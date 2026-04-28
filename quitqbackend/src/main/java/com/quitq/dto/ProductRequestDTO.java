@@ -19,11 +19,10 @@ public record ProductRequestDTO(
         @Min(value = 0, message = "Stock cannot be negative")
         Integer stockQuantity,
 
-        String imageUrl,
+
 
         @NotNull(message = "Category ID is required")
-        Long categoryId,
+        Long categoryId
 
-        @NotNull(message = "Seller ID is required")
-        Long sellerId
+
 ) {}
